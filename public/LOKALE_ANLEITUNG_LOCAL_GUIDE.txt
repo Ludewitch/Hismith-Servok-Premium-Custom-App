@@ -1,0 +1,143 @@
+================================================================================
+  HISMITH SERVOK PREMIUM H2 STUDIO — BEDIENUNGSANLEITUNG & SETUP GUIDE
+================================================================================
+
+[DE] DEUTSCH — AUSFÜHRLICHE ANLEITUNG & FEATURE-ÜBERSICHT
+--------------------------------------------------------------------------------
+🔥 WICHTIGER RECHTLICHER HINWEIS:
+Diese Anwendung steht in keiner offiziellen Verbindung zu Hismith.
+Die Software ist spezialisiert und optimiert für den Hismith Servok Premium H2 / S2
+sowie kompatible Servok-Linearaktoren mit Hismith BLE-Protokoll.
+Nutzung auf eigene Gefahr und Verantwortung.
+
+WILLKOMMEN IM OBSIDIAN KINETIC COCKPIT!
+Erlebe modernste audiophile Haptik, fließende 2D-Einhand-Gestensteuerung,
+eine interaktive Vorlagen-Bibliothek in 10 harmonisierten Kategorien,
+das neue Einstellungen-System mit 10+10 Akzentfarben sowie professionelle 4-Spur-Kurvenbearbeitung.
+
+================================================================================
+1. DIE NEUEN CORE-FEATURES IM ÜBERBLICK
+================================================================================
+
+A) NEUES MENÜ "EINSTELLUNGEN" (PER KOPFZEILE ODER STARTBILDSCHIRM):
+   - Reiter 1: "Design & Akzentfarben":
+     * Auswahl zwischen OLED Darkmode und Soft Lightmode, kombiniert mit Warm/Cold-Nuance.
+     * 10 kuratierte Akzentfarben für Darkmode (Electric Cyan, Sensual Rose, Ultraviolet Neon,
+       Champagne Amber, Emerald Silk, Crimson Passion, Celestial Blue, Orchid Blush, Cyber Lime,
+       Titanium Platinum).
+     * 10 kuratierte Akzentfarben für Lightmode (Royal Mulberry, Rose Terracotta, Sapphire Indigo,
+       Sunset Peach, Imperial Jade, Golden Honey, Lavender Iris, Ruby Coral, Teal Laguna, Espresso Bronze).
+     * Alle Farben wirken sofort in Echtzeit auf Buttons, Kurven, Shader und Glass-Optiken.
+
+   - Reiter 2: "Werte & Standard-Dynamik":
+     * Standard-Steuerungsmodus: 0x02 Positions-Wegsteuerung (präzise Tiefenkorridore) oder
+       0x01 Geschwindigkeits-Regelung (freier Hub mit Temporegelung).
+     * Standard-Dynamik / Umkehr-Sanftheit (Register 0x09: Stufe 1 bis 10 für samtweiche Bremskurven).
+     * Standard-Startkadenz (15 bis 240 SPM).
+     * Standard-Hubbereich (Min % und Max %).
+     * Sensorische Rückmeldung: Klick-Synthesizer, Mobil-Vibration und Display Wake-Lock.
+
+   - Reiter 3: "Geräte & Bluetooth Auto-Reconnect":
+     * Liste aller gekoppelten / bekannten Bluetooth-Geräte.
+     * Schalter "Beim Start automatisch nach gekoppelten Geräten suchen und verbinden":
+       Ermöglicht nahtloses Reconnecten ohne manuelles Suchen bei jedem App-Start.
+     * Manuelles Scannen & Koppeln neuer Servok-Hardware.
+
+   - Reiter 4: "Datei & Speicher (servok-settings.json)":
+     * Bei lokaler Ausführung auf dem PC speichert die App alle Konfigurationen automatisch
+       in der Datei "servok-settings.json" im Anwendungsordner ab.
+     * Schnellexport als JSON-Datei und Import beliebiger Einstellungs-Dateien.
+
+B) INTERAKTIVES FLOATING WINDOW ZUR VORLAGEN-INSPEKTION:
+   - Beim Klick direkt in das Wellenform-Vorschaubild einer Vorlage im Katalog öffnet sich
+     ein großes, schwebendes Inspektions-Fenster.
+   - Vollständige, unbeschnittene Vorlagenbeschreibung für 100%ige Lesbarkeit.
+   - Hochauflösende 4-Spur-Wellenform mit interaktivem Maus-/Touch-Scrubbing.
+   - Echtzeit-Telemetrie-Dock: Sekundengenaue Anzeige von Hub-Korridor (in cm und mm),
+     Amplitude, SPM-Tempo und Umkehr-Sanftheit.
+   - Integrierte Audio-Simulation mit rhythmischen Web-Audio-Ticks.
+   - Phasen-Aufbau (Subsections) und automatisierte Gleitmittel-Impulse.
+   - Direkte Buttons zum Laden in den Editor oder zum Sofortstart via Bluetooth.
+
+C) EIGENSTÄNDIGER EINHAND-PAD PLAYER MIT LIVE-RECORDING:
+   - Erreichbar direkt über das Hauptmenü und den Startbildschirm.
+   - 2D-Gestenfläche zur synchronen Regelung von Hubtiefe (Y-Achse) und Tempo (X-Achse).
+   - "● REC"-Funktion: Zeichnet deine manuellen Gesten in Echtzeit als 4-Spur-Session auf.
+   - Speichern als eigene Vorlage mit frei wählbarem Titel, Beschreibung und Kategorie.
+
+D) 4-SPUR STUDIO-EDITOR:
+   - Feinjustierung von Min-Tiefe, Max-Tiefe, SPM-Kadenz und Stoß-Härte.
+   - Phasenunterteilung (Subsections) und Gleitmittel-Trigger setzen.
+   - Eigene Sessions dauerhaft in den Vorlagen-Katalog aufnehmen.
+
+================================================================================
+2. SCHRITT-FÜR-SCHRITT ANLEITUNG ZUR LOKALEN VERWENDUNG AM PC
+================================================================================
+
+SCHRITT 1: VORAUSSETZUNGEN
+- Installiere Node.js (Version 18 oder neuer) von https://nodejs.org/ (LTS-Version empfohlen).
+- Ein Bluetooth-fähiger PC/Laptop oder ein handelsüblicher Bluetooth-USB-Dongle.
+- Web-Bluetooth-fähiger Browser: Google Chrome oder Microsoft Edge.
+
+SCHRITT 2: 1-KLICK START AM PC (VERKNÜPFBARES ELEMENT)
+- Starte einfach die Datei "Hismith_Servok_Studio.bat" per Doppelklick!
+  Das Skript prüft automatisch Node.js, installiert beim ersten Start alle Pakete (npm install)
+  und öffnet die App sofort im Browser unter http://localhost:3000.
+- Desktop-Verknüpfung erstellen:
+  Führe die Datei "Desktop_Verknuepfung_erstellen.bat" per Doppelklick aus.
+  Es wird sofort ein fertiges Icon namens "Hismith Servok Premium Studio" auf deinem Desktop angelegt!
+
+SCHRITT 3: PLATTFORMÜBERGREIFEND VIA KONSOLE STARTEN
+- Windows / macOS / Linux:
+  node start_local.js
+  oder
+  npm run local
+  oder
+  npm run dev
+
+SCHRITT 4: BLUETOOTH-KOPPLUNG & AUTO-CONNECT
+- Schalte deinen Hismith Servok Premium ein.
+- Klicke in der App oben rechts auf "Servok Verbinden" oder öffne Einstellungen -> Geräte.
+- Wähle dein Gerät im Browser-Dialog aus.
+- Das Gerät wird als gekoppelt hinterlegt und verbindet sich dank Auto-Connect künftig automatisch.
+
+================================================================================
+3. SICHERHEIT & HARDWARE-NOT-AUS
+================================================================================
+- Der rote Not-Aus-Button schwebt stets griffbereit über der Benutzeroberfläche.
+- Tastatur-Hotkeys am PC:
+  * LEERTASTE: Not-Aus / Sofortiger Motor-Stopp (BLE Register 0x02 + 0x03 auf 0).
+  * ESC-Taste: Schließt offene Detail- oder Einstellungsfenster.
+
+--------------------------------------------------------------------------------
+
+[EN] ENGLISH — SETUP GUIDE & FEATURE OVERVIEW
+--------------------------------------------------------------------------------
+🔥 LEGAL DISCLAIMER:
+This software is not officially affiliated with or endorsed by Hismith.
+Engineered specifically for Hismith Servok Premium H2 / S2 and compatible BLE actuators.
+Use at your own risk.
+
+================================================================================
+KEY FEATURES:
+1. NEW "SETTINGS" MENU:
+   - Design tab: 10 curated Darkmode accents + 10 Lightmode accents. Instant live styling.
+   - Defaults tab: Standard control mode (Position vs Speed), reverse smoothness (Reg 0x09: 1–10),
+     start cadence (SPM), stroke corridor limits, and haptic audio/vibration feedback.
+   - Bluetooth tab: Paired device registry with automatic reconnect upon app launch.
+   - File tab: Automatic persistence in local "servok-settings.json" with export & import.
+
+2. FLOATING INSPECTION WINDOW FOR PRESETS:
+   - Click directly on any waveform thumbnail in the catalog to open the inspection window.
+   - 100% readable untruncated descriptions.
+   - HD 4-track waveform viewer with interactive scrub playhead and live telemetry dock.
+   - Built-in simulation with procedural Web Audio ticks.
+
+3. STANDALONE ONE-HANDED PAD PLAYER WITH LIVE RECORDING:
+   - 2D gesture pad for simultaneous depth & speed control.
+   - "● REC" recording: captures live gestures and saves them into the preset catalog.
+
+4. 1-CLICK LAUNCH ON PC:
+   - Double-click "Hismith_Servok_Studio.bat" to start with automated dependency check!
+   - Run "Desktop_Verknuepfung_erstellen.bat" to create a desktop shortcut.
+================================================================================

@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "theme": {
+    "luminance": "dark",
+    "temperature": "warm",
+    "darkAccentId": "sensual-rose",
+    "lightAccentId": "rose-terracotta"
+  },
+  "defaults": {
+    "controlMode": "position",
+    "smoothness": 8,
+    "spm": 45,
+    "minDepthPct": 15,
+    "maxDepthPct": 85,
+    "audioFeedback": true,
+    "hapticsEnabled": true,
+    "wakeLockAuto": true
+  },
+  "bluetooth": {
+    "autoReconnect": true,
+    "pairedDevices": [
+      {
+        "id": "servok-h2-default",
+        "name": "Hismith Servok Premium H2",
+        "pairedAt": "Standard-Kopplung",
+        "autoConnect": true
+      }
+    ]
+  }
+}

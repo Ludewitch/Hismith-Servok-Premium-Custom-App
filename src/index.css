@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+/* ============================================================================
+ * 4 SENSUAL ADULT LUXURY COLOR DESIGNS (DARK / LIGHT × WARM / COLD)
+ * ============================================================================ */
+
+:root,
+[data-theme="dark-warm"] {
+  --bg-base: #120b0f;
+  --bg-surface: #1c1218;
+  --bg-panel: #261820;
+  --border-dim: #3d2633;
+  --border-bright: #5e3b4d;
+  --text-bright: #fbf3f0;
+  --text-main: #f3e5e0;
+  --text-dim: #c4a4ae;
+  --text-muted: #8c6c76;
+  --brand-cyan: #e895a5;
+  --brand-rose: #d96b82;
+  --brand-orchid: #c88eb2;
+  --brand-blush: #fae0e5;
+  --plot-bg: #170e13;
+  --glass-bg: rgba(28, 18, 24, 0.72);
+  --glass-border: rgba(232, 149, 165, 0.22);
+  --glass-highlight: rgba(255, 240, 244, 0.08);
+  --glass-shadow: rgba(8, 4, 6, 0.55);
+  --shader-a: #e895a5;
+  --shader-b: #d4a373;
+  --shader-c: #9d4edd;
+}
+
+[data-theme="dark-cold"] {
+  --bg-base: #0b0e17;
+  --bg-surface: #131826;
+  --bg-panel: #1b2234;
+  --border-dim: #2a344d;
+  --border-bright: #435275;
+  --text-bright: #f4f7fc;
+  --text-main: #e6ecf8;
+  --text-dim: #9ba8c7;
+  --text-muted: #697799;
+  --brand-cyan: #94a8ff;
+  --brand-rose: #b784f7;
+  --brand-orchid: #7dd3fc;
+  --brand-blush: #e0e7ff;
+  --plot-bg: #0f1420;
+  --glass-bg: rgba(19, 24, 38, 0.72);
+  --glass-border: rgba(148, 168, 255, 0.22);
+  --glass-highlight: rgba(224, 231, 255, 0.08);
+  --glass-shadow: rgba(4, 6, 12, 0.6);
+  --shader-a: #94a8ff;
+  --shader-b: #7dd3fc;
+  --shader-c: #c084fc;
+}
+
+[data-theme="light-warm"] {
+  --bg-base: #faf4f0;
+  --bg-surface: #fffdfb;
+  --bg-panel: #f3e7e0;
+  --border-dim: #e4d1c7;
+  --border-bright: #cbb0a3;
+  --text-bright: #2c161e;
+  --text-main: #3d212b;
+  --text-dim: #785460;
+  --text-muted: #9e7c87;
+  --brand-cyan: #b84a62;
+  --brand-rose: #c95f76;
+  --brand-orchid: #9c5678;
+  --brand-blush: #6e2537;
+  --plot-bg: #f4eae3;
+  --glass-bg: rgba(255, 252, 249, 0.78);
+  --glass-border: rgba(184, 74, 98, 0.2);
+  --glass-highlight: rgba(255, 255, 255, 0.75);
+  --glass-shadow: rgba(92, 52, 64, 0.1);
+  --shader-a: #e895a5;
+  --shader-b: #eab69f;
+  --shader-c: #d88c9a;
+}
+
+[data-theme="light-cold"] {
+  --bg-base: #f2f5fa;
+  --bg-surface: #ffffff;
+  --bg-panel: #e7ecf6;
+  --border-dim: #d3dceb;
+  --border-bright: #b3c1dc;
+  --text-bright: #161c2e;
+  --text-main: #232b44;
+  --text-dim: #566282;
+  --text-muted: #828eae;
+  --brand-cyan: #5560e6;
+  --brand-rose: #7c4dff;
+  --brand-orchid: #0284c7;
+  --brand-blush: #2f3690;
+  --plot-bg: #e8eef8;
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(85, 96, 230, 0.2);
+  --glass-highlight: rgba(255, 255, 255, 0.85);
+  --glass-shadow: rgba(35, 48, 84, 0.09);
+  --shader-a: #818cf8;
+  --shader-b: #7dd3fc;
+  --shader-c: #c4b5fd;
+}
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-bg-base: var(--bg-base);
+  --color-bg-surface: var(--bg-surface);
+  --color-bg-panel: var(--bg-panel);
+  --color-border-dim: var(--border-dim);
+  --color-border-bright: var(--border-bright);
+  --color-text-bright: var(--text-bright);
+  --color-text-main: var(--text-main);
+  --color-text-dim: var(--text-dim);
+  --color-text-muted: var(--text-muted);
+
+  --color-brand-cyan: var(--brand-cyan);
+  --color-brand-rose: var(--brand-rose);
+  --color-brand-orchid: var(--brand-orchid);
+  --color-brand-blush: var(--brand-blush);
+}
+
+@layer base {
+  html,
+  body {
+    background-color: var(--bg-base);
+    color: var(--text-bright);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+      color 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+/* ============================================================================
+ * SENSUAL GLASS-OPTICS & SUPPLE ORGANIC SURFACES
+ * ============================================================================ */
+
+.sensual-glass,
+.obsidian-card,
+.obsidian-glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(28px) saturate(165%);
+  -webkit-backdrop-filter: blur(28px) saturate(165%);
+  border: 1px solid var(--glass-border);
+  box-shadow:
+    0 20px 50px var(--glass-shadow),
+    inset 0 1px 1px var(--glass-highlight);
+  transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.sensual-glass-interactive {
+  background: var(--glass-bg);
+  backdrop-filter: blur(28px) saturate(170%);
+  -webkit-backdrop-filter: blur(28px) saturate(170%);
+  border: 1px solid var(--glass-border);
+  box-shadow:
+    0 16px 40px var(--glass-shadow),
+    inset 0 1px 1px var(--glass-highlight);
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sensual-glass-interactive:hover {
+  border-color: var(--brand-cyan);
+  transform: translateY(-2px);
+  box-shadow:
+    0 24px 56px var(--glass-shadow),
+    0 0 28px color-mix(in srgb, var(--brand-cyan) 18%, transparent),
+    inset 0 1px 2px var(--glass-highlight);
+}
+
+/* Refractive Caustic Shimmer Edge */
+.glass-optics-edge {
+  position: relative;
+}
+.glass-optics-edge::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--brand-cyan) 45%, transparent) 0%,
+    transparent 45%,
+    color-mix(in srgb, var(--brand-orchid) 35%, transparent) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Subtle organic silk weave pattern for tactile pads */
+.carbon-weave {
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    color-mix(in srgb, var(--brand-cyan) 12%, transparent) 0%,
+    transparent 70%
+  );
+}
+
+/* Soft Emergency Stop Aura */
+@keyframes pulse-soft-crimson {
+  0%,
+  100% {
+    box-shadow: 0 0 18px rgba(225, 29, 72, 0.45), inset 0 0 10px rgba(255, 255, 255, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 32px rgba(225, 29, 72, 0.75), inset 0 0 16px rgba(255, 255, 255, 0.4);
+  }
+}
+
+.kill-switch-aura {
+  animation: pulse-soft-crimson 2.2s infinite ease-in-out;
+}
+
+/* Custom Supple Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-bright);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-cyan);
+}

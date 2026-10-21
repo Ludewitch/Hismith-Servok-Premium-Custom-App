@@ -1,0 +1,8 @@
+{
+  "name": "Hismith Servok Premium H2 — Obsidian Kinetic Cockpit",
+  "description": "High-End Web Bluetooth Telemetry, Kinetic 2D Gesture Control, Smart Waveform & Climax Curve Engine for the Hismith Servok Premium H2.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
